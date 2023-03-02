@@ -35,7 +35,7 @@ const renderTaskList = () => {
       renderTaskList();
     })
 
-    taskList.append(desc, done, remover);
+    taskItem.append(desc, done, remover);
     taskList.append(taskItem);
   })
 

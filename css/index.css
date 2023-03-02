@@ -2,6 +2,8 @@
   --color-one: #00008b;
   --color-two: #008000;
   --color-three: #ff0000;
+  --color-for: #f0ffff;
+  --color-five: #808080;
 }
 
 * {
@@ -15,7 +17,7 @@ header {
   color: white;
   background-color: var(--color-one);
   text-align: center;
-  padding: 30px 0;
+  padding: 20px 0;
 }
 
 main {
@@ -23,6 +25,7 @@ main {
   align-items: center;
   flex-direction: column;
   padding: 20px 0;
+  background-color: var(--color-for);
 }
 
 input {
@@ -53,28 +56,45 @@ input:focus {
   border: none;
 }
 
+.task-list {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 800px;
+  margin-top: 25px;
+}
+
 .task-item {
   display: flex;
   justify-content: space-between;
-  flex-direction: column;
-  margin-bottom: 10px;
+  align-items: flex-end;
+  width: 700px;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 0 1px 5px #d3d3e0;
 }
 
-desc {
+p {
+  flex: 2;
+  text-align: left;
+}
+
+span {
+  flex: 1;
+  text-align: right;
+}
+
+.desc {
   font-weight: bold;
-  color: #ffffff;
+  color: var(--color-five);
 }
 
-.done {
-  display: flex;
-  margin-left: 10px;
+.done, .delete {
   cursor: pointer;
   color: var(--color-two);
 }
 
 .delete {
-  display: flex;
-  margin-left: 10px;
   cursor: pointer;
   color: var(--color-three);
 }
