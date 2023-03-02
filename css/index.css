@@ -1,0 +1,80 @@
+:root {
+  --color-one: #00008b;
+  --color-two: #008000;
+  --color-three: #ff0000;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+  color: white;
+  background-color: var(--color-one);
+  text-align: center;
+  padding: 30px 0;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px 0;
+}
+
+input {
+  width: 300px;
+  padding: 15px;
+  outline: none;
+  border: 2px solid #d3d3d3;
+  border-radius: 5px;
+  transition: all .3s;
+  font-size: 12pt;
+}
+
+input:focus {
+  border: 2px solid var(--color-one);
+}
+
+.btn {
+  width: 100px;
+  cursor: pointer;
+  padding: 17px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: var(--color-one);
+}
+
+.btn:focus {
+  border: none;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+desc {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.done {
+  display: flex;
+  margin-left: 10px;
+  cursor: pointer;
+  color: var(--color-two);
+}
+
+.delete {
+  display: flex;
+  margin-left: 10px;
+  cursor: pointer;
+  color: var(--color-three);
+}
