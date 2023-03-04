@@ -1,9 +1,9 @@
 :root {
-  --color-one: #00008b;
-  --color-two: #008000;
-  --color-three: #ff0000;
-  --color-for: #f0ffff;
-  --color-five: #808080;
+  --color-one: #4b0082;
+  --color-two: #f6f2f8;
+  --color-three: #008000;
+  --color-for: #dd1e1e;
+  --color-five: #d3d3d3;
 }
 
 * {
@@ -13,11 +13,23 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+body {
+  background-color: var(--color-two);
+}
+
 header {
-  color: white;
-  background-color: var(--color-one);
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
   text-align: center;
   padding: 20px 0;
+  color: #ffffff;
+  background-color: var(--color-one);
+}
+
+.sub-title {
+  font-size: 18px;
+  text-align: center;
 }
 
 main {
@@ -25,17 +37,17 @@ main {
   align-items: center;
   flex-direction: column;
   padding: 20px 0;
-  background-color: var(--color-for);
+  background-color: var(--color-two);
 }
 
 input {
   width: 300px;
+  font-size: 15px;
   padding: 15px;
   outline: none;
-  border: 2px solid #d3d3d3;
-  border-radius: 5px;
+  border: 2px solid var(--color-five);
+  border-radius: 15px;
   transition: all .3s;
-  font-size: 12pt;
 }
 
 input:focus {
@@ -45,10 +57,11 @@ input:focus {
 .btn {
   width: 100px;
   cursor: pointer;
-  padding: 17px;
+  font-weight: bold;
+  padding: 15px;
   border: none;
-  border-radius: 5px;
-  color: white;
+  border-radius: 15px;
+  color: #ffffff;
   background-color: var(--color-one);
 }
 
@@ -67,34 +80,33 @@ input:focus {
 .task-item {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
-  width: 700px;
+  align-items: center;
+  width: 450px;
   padding: 10px;
   margin: 10px;
-  box-shadow: 0 1px 5px #d3d3e0;
+  background-color: #ffffff;
 }
 
 p {
   flex: 2;
-  text-align: left;
+}
+
+.description {
+  font-weight: bold;
+  color: #000000;
 }
 
 span {
-  flex: 1;
-  text-align: right;
+  display: flex;
+  margin: 5px;
 }
 
-.desc {
-  font-weight: bold;
-  color: var(--color-five);
-}
-
-.done, .delete {
-  cursor: pointer;
-  color: var(--color-two);
-}
-
-.delete {
+.green-check {
   cursor: pointer;
   color: var(--color-three);
+}
+
+.red-remove {
+  cursor: pointer;
+  color: var(--color-for);
 }
